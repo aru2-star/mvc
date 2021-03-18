@@ -28,7 +28,6 @@ class Block_Cat_Edit extends Block_Core_Template {
         if (!$this->category) {
             $this->setCategory();
         }
-
         return $this->category;
     }
 
