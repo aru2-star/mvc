@@ -1,5 +1,6 @@
 <?php
 
+
 Mage::loadFileByClassName('Block_Core_Template');
 
 class Block_Admin_Attribute_Option_Grid extends Block_Core_Template {
