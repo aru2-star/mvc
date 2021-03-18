@@ -1,7 +1,6 @@
 <?php
 
 Mage::loadFileByClassName('Block_Core_Template');
-
 class Block_Admin_Attribute_Grid extends Block_Core_Template {
 	protected $attributes = [];
 	protected $templateName = null;
