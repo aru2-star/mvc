@@ -1,5 +1,6 @@
 <?php
 
+
 Mage::loadFileByClassName(
 'Block_Core_Template');
 class Block_Admin_Attribute_Edit extends Block_Core_Template {
