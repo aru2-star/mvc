@@ -4,17 +4,16 @@ namespace Controller\Admin;
 \Mage::loadFileByClassName('Block\Core\Layout');
 
 
-class Admin extends \Controller\Core\Admin{
-    protected $admins = [];
-
+class Admin extends \Controller\Core\Admin
+{
     public function gridAction (){
        
         try{
-            $gridBlock = \Mage::getBlock('Block\Admin\Admin\Grid');
-            $gridBlock->setController($this);
+            $grid = \Mage::getBlock('Block\Admin\Admin\Grid');
+            $grid->setController($this);
             $layout = $this->getLayout();
             $content = $layout->getChild('content');
-            $content->addChild($gridBlock);
+            $content->addChild($grid);
             $this->toHtmlLayout();
 
         }catch(\Exception $e){
