@@ -51,7 +51,7 @@ class Media extends \Controller\Core\Admin{
 			}
 			$imageName = $_FILES['file']['name'];
 			$imagetmpPath = $_FILES['file']['tmp_name'];
-			$path = $_SERVER['DOCUMENT_ROOT'].'/cybercom/Images/Product/';
+			$path = $_SERVER['DOCUMENT_ROOT'].'/mvc/Images/Product/';
 			$randomName = 'product'.rand(1,6).'_'.$imageName;
 			if (move_uploaded_file($imagetmpPath, $path.$randomName)) {
 				$media = \Mage::getModel('Model\Product\Media');
@@ -94,7 +94,7 @@ class Media extends \Controller\Core\Admin{
 		try{
 			
 			$mediaId = $this->getRequest()->getPost('remove');
-			$path = $_SERVER['DOCUMENT_ROOT'].'/cybercom/Images/Product/';
+			$path = $_SERVER['DOCUMENT_ROOT'].'/mvc/Images/Product/';
 			$mediaModel = \Mage::getModel('Model\Product\Media');
 			foreach ($mediaId as $id =>$value) {
 				$mediaModel->load($id);
