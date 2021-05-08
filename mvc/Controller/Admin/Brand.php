@@ -88,7 +88,7 @@ class Brand extends \Controller\Core\Admin{
 			$imageName = $_FILES['file']['name'];
 			$imagetmpPath = $_FILES['file']['tmp_name'];
 			$randomName = 'brand_'.rand(1,6).'_'.$imageName;
-			$path = $_SERVER['DOCUMENT_ROOT'].'/cybercom/Images/Brand/';
+			$path = $_SERVER['DOCUMENT_ROOT'].'/mvc/Images/Brand/';
 			if (move_uploaded_file($imagetmpPath, $path.$randomName)) {
 					$brand->name = $name;
 					$brand->sortOrder = $sortOrder;
