@@ -217,17 +217,5 @@ class Brand extends \Controller\Core\Admin{
 		echo json_encode($response);
 
 	
-	}
-	
-	public function clearFilterAction()
-	{
-		
 	}	
-
 }
-
-
-
-
-
-?>
