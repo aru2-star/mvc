@@ -51,7 +51,7 @@ class Media extends \Controller\Core\Admin{
 				$imageName = $_FILES['file']['name'];
 				$imagetmpPath = $_FILES['file']['tmp_name'];
 				$randomName = 'category_'.rand(1,6).'_'.$imageName;
-				$path = $_SERVER['DOCUMENT_ROOT'].'/cybercom/Images/Category/';
+				$path = $_SERVER['DOCUMENT_ROOT'].'/mvc/Images/Category/';
 				if (move_uploaded_file($imagetmpPath, $path.$randomName)) {
 					$categoryMedia = \Mage::getModel('Model\Category\Media');
 					$categoryMedia->categoryId = $this->getRequest()->getGet('categoryId');
@@ -96,7 +96,7 @@ class Media extends \Controller\Core\Admin{
 		try{
 			
 			$mediaId = $this->getRequest()->getPost('remove');
-			$path = $_SERVER['DOCUMENT_ROOT'].'/cybercom/Images/Category/';
+			$path = $_SERVER['DOCUMENT_ROOT'].'/mvc/Images/Category/';
 			$mediaModel = \Mage::getModel('Model\Category\Media');
 			
 			foreach ($mediaId as $id =>$value) {
@@ -161,13 +161,6 @@ class Media extends \Controller\Core\Admin{
 					} else {
 						$mediaModel->icon = 0;
 					}
-
-					if(array_key_exists($id, $banner)){
-						$mediaModel->banner = 1;	
-					} else {
-						$mediaModel->banner = 0;
-					}
-
 					$mediaModel->save();
 				}
 			}
