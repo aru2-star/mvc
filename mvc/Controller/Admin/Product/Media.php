@@ -71,7 +71,7 @@ class Media extends \Controller\Core\Admin{
 
 			$response = [
 			'status' => 'success',
-			'message' => 'you did it',
+			'message' => 'Displayed',
 			'element' => [
 				[
 					'selector' => '#moduleGrid',
@@ -113,7 +113,7 @@ class Media extends \Controller\Core\Admin{
 
 			$response = [
 			'status' => 'success',
-			'message' => 'you did it',
+			'message' => 'Displayed',
 			'element' => [
 				[
 					'selector' => '#moduleGrid',
